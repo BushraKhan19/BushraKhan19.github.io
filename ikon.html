@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='<link href="https://fonts.googleapis.com/css?family=Miss+Fajardose" rel="stylesheet">'>
+<style>
+body {
+  font-family: 'Miss Fajardose', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: lightblue;
+}
+    ul {
+      padding: 10px;
+      text-align: center;
+    }
+li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+
+    }
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Miss Fajardose', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: grey;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: grey;
+  margin: 0px 0 70px 0;
+}
+button {
+  color: white;
+  background: black;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(4,9,0,1), rgba(0,2,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Ikon</h1>
+<h2>Let's be Ikonic</h2>
+<ul>
+      <li><button onclick=debut()>debut</button></li>
+      <li><button onclick=lovescenario()>love scenario</button></li>
+      <li><button onclick=dailylives()>daily lives</button></li>
+    </ul>
+
+<div id="thing"></div>
+
+
+
+<script>
+
+debutImages = [
+  'url("https://www.billboard.com/files/media/iKON-2018-cr-YG-Entertainment-billboard-1548.jpg")',
+  'url("https://konysisland.files.wordpress.com/2018/01/music-core.png?w=640")',
+  'url("https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&url=https://i.ytimg.com/vi/021LeY4PEuw/hqdefault.jpg")',
+]
+lovescenarioImages = [
+ 'url("https://www.allkpop.com/upload/2018/10/af_org/11120435/yang-hyun-suk-ikon.jpg")',
+ 'url("https://i0.wp.com/ulzza.com/wp-content/uploads/2019/01/iKONs-Love-Scenario-Creates-New-Record-Again.png?fit=941%2C472&ssl=1")',
+ 'url("https://0.soompi.io/wp-content/uploads/2018/02/04192519/iKON1.jpg")',
+]
+dailylivesImages = [
+  'url("https://v-phinf.pstatic.net/20150821_212/1440124997619jPbaR_JPEG/upload_1.jpg?type=f886_499")',
+  'url("http://v.phinf.naver.net/20151117_36/14477243686888nnlx_PNG/1447602667142.png")',
+  'url("http://v.phinf.naver.net/20160304_59/1457098791049NQDqV_JPEG/V_20160304_22374765857830.jpg?type=f886_499")',
+]
+debutDivs = [
+'<div class="item" onclick=this.classList.toggle("show-description")><p>My type<span class="price"></span><br/><small>Hey We are Ikon. We are a group that is from South Korea. We all came together for one dream, to make music and spread happiness. we debuted with a single called " My Type". People really enjoyed our music which was our goal.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Members<span class="price"></span><br /><small>We are a seven memeber boygroup under YG entertainment. the members are B.I, Bobby, Jay, DK, Song, Junhoe, and Chanwoo.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Awards<span class="price"></span><br /><small>As rookies we got a lot of awards. When we debuted in 2016, we got grand slam rookie awards which means that we got awarded at every single award show.We were really thankful to our fans.</small></p></div>',
+]
+lovescenarioDivs = [
+'<div class="item" onclick=this.classList.toggle("show-description")><p>comeback<span class="price"></span><br /><small>As a group, we did not make a comback for a while. That affected us in a negative way. But we revived ourselves with love scenario which got us a lot of love and recognition.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Children song?<span class="price"></span><br /><small>As love scenario got popular, pwople started singing it. Specially children. Even though it was a song about heartbreak, children sang it like it was rhyme for them.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Daesang<span class="price"></span><br /><small>Daesang is an award that singers get when they are voted by the public. It shows that they are loved and supported. It was an overwhelming feeling because we got Artist of the year and Song of the year at the same time.</small></p></div>',
+]
+dailylivesDivs = [
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>The boys<span class="price"></span><br /><small>When we are not at work, we usually spend time with each other. We love hanging out with each other. We play pranks on our oldest Jay because he is the shortest. LMAOO.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Vlive<span class="price"></span><br /><small>In addition to just hanging out with each other, we do Vlives. It is basically an app where we can interact with our fans. They ask us questions and we answer them. We luugh, we cry and everything else.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Our families<span class="price"></span><br /><small>We all hail from South Korea, but one of our members, Bobby is from The US. He left his family to be a part of this family. Our families love each other even though we do not have much time for them.</small></p></div>',
+]
+
+function debut() {
+  things = document.getElementById("thing")
+  things.innerHTML = ''
+  things.innerHTML += debutDivs[0]
+  things.innerHTML += debutDivs[1]
+  things.innerHTML += debutDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = debutImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+function lovescenario() {
+  things = document.getElementById("thing")
+  things.innerHTML = ''
+  things.innerHTML += lovescenarioDivs[0]
+  things.innerHTML += lovescenarioDivs[1]
+  things.innerHTML += lovescenarioDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = lovescenarioImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+   }  
+ }
+function dailylives() {
+  things = document.getElementById("thing")
+  things.innerHTML = ''
+  things.innerHTML += dailylivesDivs[0]
+  things.innerHTML += dailylivesDivs[1]
+  things.innerHTML += dailylivesDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = dailylivesImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+    }
+}
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
