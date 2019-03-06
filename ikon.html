@@ -109,7 +109,7 @@ small {
       <li><button onclick=debut()>debut</button></li>
       <li><button onclick=lovescenario()>love scenario</button></li>
       <li><button onclick=dailylives()>daily lives</button></li>
-	<li><button onclick=solo()>solo</button><li>
+      <li><button onclick=solo()>solo</button><li>
     </ul>
 
 <div id="thing"></div>
@@ -153,7 +153,12 @@ dailylivesDivs = [
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Vlive<span class="price"></span><br /><small>In addition to just hanging out with each other, we do Vlives. It is basically an app where we can interact with our fans. They ask us questions and we answer them. We luugh, we cry and everything else.</small></p></div>',
   '<div class="item" onclick=this.classList.toggle("show-description")><p>Our families<span class="price"></span><br /><small>We all hail from South Korea, but one of our members, Bobby is from The US. He left his family to be a part of this family. Our families love each other even though we do not have much time for them.</small></p></div>',
 ]
-
+soloDivs = [
+   '<div class="item" onclick=this.classList.toggle("show-description")><p>Bobby<span class="price"></span><br /><small>Bobby was the first member in our group to have a solo career. He debuted with a song called hold up. It was a rap song that bobby was really passionate about. Later he released a full length album called love and fall. The songs were composed by him which he really adored.</small></p></div>',
+   '<div class="item" onclick=this.classList.toggle("show-description")><p>BI<span class="price"></span><br /><small>BI, our leader, is next in line for solo debut. Our CEO yang hyuk suk declared that he was working on his current album which is fully composed by him. As the leader, he got full supoort from his teammates.</small></p></div>',
+   '<div class="item" onclick=this.classList.toggle("show-description")><p>Dk<span class="price"></span><br /><small>DK, the main dancer of the group had a lot of solo stages during their concert. He is a talented dancer and singer. Being the best dancer in the group, he gets to have a lot og solo performances to represent his group.</small></p></div>',
+]
+	
 function debut() {
   things = document.getElementById("thing")
   things.innerHTML = ''
@@ -188,6 +193,18 @@ function dailylives() {
   items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = dailylivesImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+    }
+}
+function solo() {
+  things = document.getElementById("thing")
+  things.innerHTML = ''
+  things.innerHTML += soloDivs[0]
+  things.innerHTML += soloDivs[1]
+  things.innerHTML += soloDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = soloImages[i]
 		items[i].style.backgroundSize = '100% 100%'
     }
 }
