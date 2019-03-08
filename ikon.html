@@ -141,6 +141,7 @@ soloImages = [
   'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRITbmGXd5Ai72YbeXSDliZ9qsU7MwLs1t74owTakl83zVUvAPo")',
   'url("https://i0.wp.com/wikifamouspeople.com/wp-content/uploads/2018/08/DK-ikon.jpg?fit=770%2C380&ssl=1")',
   'url("https://img.kpopmap.com/2018/09/koo-jun-hoe.jpg")',
+  'url("https://i.pinimg.com/originals/86/2c/6d/862c6d45c4b37a327c7d5628f0eb36ab.jpg")',
 ]
 debutDivs = [
 '<div class="item" onclick=this.classList.toggle("show-description")><p>My type<span class="price"></span><br/><small>Hey We are Ikon. We are a group that is from South Korea. We all came together for one dream, to make music and spread happiness. we debuted with a single called " My Type". People really enjoyed our music which was our goal.</small></p></div>',
@@ -166,6 +167,7 @@ soloDivs = [
  '<div class="item" onclick=this.classList.toggle("show-description")><p>BI<span class="price"></span><br/><small>BI, our leader, is next in line for solo debut. Our CEO yang hyuk suk declared that he was working on his current album which is fully composed by him. As the leader, he got full supoort from his teammates.</small></p></div>',
  '<div class="item" onclick=this.classList.toggle("show-description")><p>Dk<span class="price"></span><br/><small>DK, the main dancer of the group had a lot of solo stages during their concert. He is a talented dancer and singer. Being the best dancer in the group, he gets to have a lot og solo performances to represent his group.</small></p></div>',
  '<div class="item" onclick=this.classList.toggle("show-description")><p>Junhoe<span class="price"></span><br/><small>Similarly to DK, junhoe is an expert. OHH not in dancing, but singing. He is the main vocalist of the group. He has appeared in many shows and sang songs. Therfore, he was also considering solo debut like the others in the group.</small></p></div>',
+ '<div class="item" onclick=this.classList.toggle("show-description")><p>Jinhwan<span class="price"></span><br/><small>Jinhwan is the oldest in Ikon. He is one of our greatest vocalist and dancer. He has also appeared in many varity show solo which has helped Ikon gain recognition.</small></p></div>',
 ]
 	
 function debut() {
@@ -216,7 +218,7 @@ function solo() {
   things.innerHTML += soloDivs[2]
   things.innerHTML += soloDivs[3]
   items = document.getElementsByClassName("item")
-  for (i=0; i<4; i=i+1) {
+  for (i=0; i<5; i=i+1) {
 		items[i].style.background = soloImages[i]
 		items[i].style.backgroundSize = '100% 100%'
     }
