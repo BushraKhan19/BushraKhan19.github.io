@@ -92,7 +92,7 @@ if (score>=70 && level == 2){
   if (dist( x, y, b, k) < 40 + 80) {
 	score = score + 1
 }
- 
+if (touches.length == 0)   { 
   if (keyIsDown(LEFT_ARROW)) {
     x = x - 6
   }
@@ -105,6 +105,13 @@ if (score>=70 && level == 2){
   if (keyIsDown(DOWN_ARROW)) {
     y = y + 6
   }
+}
+	  
+else { 
+		x = touches[0].x
+		y = touches[0].y
+}
+
 fill(40,80,100)
 circle(b,k,53)
 b= b+5
